@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+#root{
+    --button-color: #777C5C;
+    --bg-color: #EFE6D7;
+    --text-color: #142C12;
+}
+
+
+
+#root{
+    display: flex;
+    background-color: var(--bg-color);
+    justify-content: center;
+    font-family: "Tenor Sans", sans-serif;
+}
+
+@layer base {
+
+}
