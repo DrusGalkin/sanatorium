@@ -14,33 +14,33 @@ export default function Employees() {
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Иванов Петр Сергеевич",
+                role: "Главный врач"
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Смирнова Анна Владимировна",
+                role: "Физиотерапевт"
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Козлов Дмитрий Николаевич",
+                role: "Массажист"
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Морозова Татьяна Игоревна",
+                role: "Медицинская сестра"
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Волков Андрей Павлович",
+                role: "Реабилитолог"
             },
             {
                 url: "https://s11.stc.yc.kpcdn.net/share/i/12/14836414/wr-960.webp",
-                name: "Федорова Елена Анатольевна",
-                role: "Психотерапевт"
+                name: "Соколова Наталья Михайловна",
+                role: "Диетолог"
             },
         ]
 
@@ -49,37 +49,46 @@ export default function Employees() {
     }, [])
 
     return (
-        <div className='flex w-full flex-1 flex-col items-center'>
-            <h1 className='text-[4rem]'>Медицинский персонал</h1>
+        <div className='flex w-full flex-1 flex-col items-center px-4 md:px-6 lg:px-8'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-6 md:mb-8 lg:mb-10'>
+                Медицинский персонал
+            </h1>
 
-            <div className='w-full flex flex-col gap-6 mt-14 max-w-[1600px]'>
+            <div className='w-full flex flex-col gap-4 md:gap-5 lg:gap-6 max-w-[1600px]'>
+                <div className='flex flex-col lg:flex-row gap-4 md:gap-5 lg:gap-6'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 lg:w-3/4'>
+                        {up.map((item, index) => (
+                            <EmployeeCart
+                                url={item.url}
+                                role={item.role}
+                                name={item.name}
+                                key={index}
+                            />
+                        ))}
+                    </div>
 
-                <div className='flex gap-4 justify-between'>
-                    {
-                        up.map((item, index) => (
-                            <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
-                        ))
-                    }
-
-                    <p className='max-w-[340px] text-[1.21rem]'>
-                        В санатории "Чистый Воздух" трудится опытный медицинский персонал, который является основой
-                        нашего оздоровительного подхода.
-                        Наши врачи и медсестры имеют специальное образование в курортологии, физиотерапии и
-                        реабилитации. Каждый сотрудник предлагает индивидуальные программы лечения, учитывая состояние
-                        здоровья каждого гостя.
-                    </p>
+                    <div className='lg:w-1/4 flex items-center'>
+                        <p className='text-sm sm:text-base md:text-lg lg:text-[1.21rem] leading-relaxed bg-[#EFE6D7] p-4 md:p-5 lg:p-6 rounded-lg'>
+                            В санатории "Чистый Воздух" трудится опытный медицинский персонал, который является основой
+                            нашего оздоровительного подхода.
+                            Наши врачи и медсестры имеют специальное образование в курортологии, физиотерапии и
+                            реабилитации. Каждый сотрудник предлагает индивидуальные программы лечения, учитывая состояние
+                            здоровья каждого гостя.
+                        </p>
+                    </div>
                 </div>
 
-                <div className='flex gap-4 justify-between'>
-                    {
-                        down.map((item, index) => (
-                            <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
-                        ))
-                    }
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6'>
+                    {down.map((item, index) => (
+                        <EmployeeCart
+                            url={item.url}
+                            role={item.role}
+                            name={item.name}
+                            key={index}
+                        />
+                    ))}
                 </div>
             </div>
-
-
         </div>
     )
 }

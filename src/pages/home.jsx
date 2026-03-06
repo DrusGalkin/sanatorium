@@ -3,6 +3,7 @@ import About from "../widgets/ui/adout/about.jsx";
 import Service from "../widgets/ui/services/service.jsx";
 import Employees from "../widgets/ui/employee/employees.jsx";
 import Rooms from "../widgets/ui/rooms-houses/rooms.jsx";
+import Booking from "../widgets/ui/booking/booking.jsx";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Service/>
             <Employees/>
             <Rooms/>
+            <Booking/>
         </div>
     )
 }
