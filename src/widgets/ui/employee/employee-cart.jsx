@@ -6,7 +6,7 @@ export default function EmployeeCart({ url, name, role }) {
                 src={url}
                 alt=""/>
 
-            <h1 className='text-[1.5rem]'>{name}</h1>
+            <h1 className='text-[1.5rem] text-center'>{name}</h1>
 
             <p className='text-[1.25rem] text-center'>
                 {role}

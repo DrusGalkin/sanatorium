@@ -17,7 +17,7 @@ export default function Booking(){
     return (
         <div className='w-full'>
             <BookingWrapper>
-                <section className='text-[#142C12] flex flex-1 flex-col items-center justify-center max-w-6xl px-4'>
+                <section className='text-[#142C12]  flex flex-1 flex-col items-center justify-center max-w-6xl px-4'>
                     <h1 className='text-[4rem]'>Услуги</h1>
 
                     <form className='bg-[#777C5C]  w-[997px]' action="">

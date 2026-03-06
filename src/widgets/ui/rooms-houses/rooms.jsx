@@ -30,7 +30,6 @@ export default function Rooms() {
 
     return (
         <div className='flex w-full flex-1 flex-col items-center px-4 md:px-6 lg:px-8'>
-            {/* Заголовок и описание */}
             <div className='flex flex-col justify-center items-center w-full max-w-[1600px] mb-6 md:mb-8 lg:mb-10'>
                 <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
                     Номера/Домики

@@ -11,7 +11,7 @@ export default function BookingWrapper({ children }){
             <div className="absolute inset-0 bg-[#EFE6D7BA] pointer-events-none" />
 
             {children && (
-                <div className="absolute inset-0 flex p-7  justify-center pointer-events-none">
+                <div className="absolute inset-0 flex p-7   pointer-events-none">
                     <div className="pointer-events-auto">
                         {children}
                     </div>
