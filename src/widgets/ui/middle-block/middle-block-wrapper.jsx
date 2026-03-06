@@ -4,7 +4,7 @@ export default function MiddleBlockWrapper({ children }){
     return (
         <div className='w-full relative -top-29'>
             <img
-                className='w-full object-cover max-h-[480px] md:max-h-[720px] lg:max-h-[1080px]'
+                className='w-full object-cover  h-[1080px]'
                 src={photo}
                 alt="Санаторий"
             />

@@ -13,6 +13,7 @@
     background-color: var(--bg-color);
     justify-content: center;
     font-family: "Tenor Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 @layer base {
