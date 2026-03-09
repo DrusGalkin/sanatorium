@@ -18,7 +18,7 @@ export default function MiddleBlockWrapper({ children }){
     return (
         <div className='w-full relative -top-29'>
             <img
-                className={`w-full object-cover ${isMobile ? 'h-[950px]' : 'h-[1080px]'}`}
+                className={`w-full object-cover ${isMobile ? 'h-[800px]' : 'h-[1080px]'}`}
                 src={photo}
                 alt="Санаторий"
             />
