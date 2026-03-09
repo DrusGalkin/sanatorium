@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import EmployeeCart from "./employee-cart.jsx";
+import {Fade} from "react-awesome-reveal";
 
 export default function Employees() {
     const [up, setUp] = useState([])
@@ -50,33 +51,44 @@ export default function Employees() {
 
     return (
         <div className='flex w-full flex-1 flex-col items-center'>
-            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
-                Медицинский персонал
-            </h1>
+            <Fade >
+                <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
+                    Медицинский персонал
+                </h1>
+            </Fade>
+
             <div className='w-full flex flex-col gap-6 mt-14 max-w-[1600px]'>
 
                 <div className='flex-col-reverse flex md:flex-row gap-4 justify-center items-center md:items-start md:justify-between'>
-                    {
-                        up.map((item, index) => (
-                            <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
-                        ))
-                    }
 
-                    <p className='max-w-[340px] text-[1.21rem]'>
-                        В санатории "Чистый Воздух" трудится опытный медицинский персонал, который является основой
-                        нашего оздоровительного подхода.
-                        Наши врачи и медсестры имеют специальное образование в курортологии, физиотерапии и
-                        реабилитации. Каждый сотрудник предлагает индивидуальные программы лечения, учитывая состояние
-                        здоровья каждого гостя.
-                    </p>
+                    <Fade cascade delay={20} triggerOnce>
+                        {
+                            up.map((item, index) => (
+                                <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
+                            ))
+                        }
+
+                        <p className='max-w-[340px] text-[1.21rem]'>
+                            В санатории "Чистый Воздух" трудится опытный медицинский персонал, который является основой
+                            нашего оздоровительного подхода.
+                            Наши врачи и медсестры имеют специальное образование в курортологии, физиотерапии и
+                            реабилитации. Каждый сотрудник предлагает индивидуальные программы лечения, учитывая состояние
+                            здоровья каждого гостя.
+                        </p>
+                    </Fade>
+
+
+
                 </div>
 
                 <div className='flex-col-reverse flex md:flex-row gap-4 justify-center items-center md:justify-between'>
-                    {
-                        down.map((item, index) => (
-                            <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
-                        ))
-                    }
+                    <Fade cascade delay={20} triggerOnce>
+                        {
+                            down.map((item, index) => (
+                                <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
+                            ))
+                        }
+                    </Fade>
                 </div>
             </div>
 

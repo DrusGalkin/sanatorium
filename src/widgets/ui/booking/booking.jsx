@@ -2,7 +2,8 @@ import BookingWrapper from "./booking-wrapper.jsx";
 import { useState } from "react";
 import GreenButton from "../../../shared/ui/green-button.jsx";
 import WhiteButton from "../../../shared/ui/white-button.jsx";
-import DatePicker from "./date-picker.jsx"; // Импортируем новый компонент
+import DatePicker from "./date-picker.jsx";
+import {Fade} from "react-awesome-reveal"; // Импортируем новый компонент
 
 export default function Booking() {
     const [formData, setFormData] = useState({
@@ -40,9 +41,10 @@ export default function Booking() {
         <div className='w-full '>
             <BookingWrapper>
                 <section className='text-[#142C12] w-full flex gap-10 flex-1 flex-col items-center justify-center max-w-6xl px-4 sm:px-6 lg:px-8'>
-                    <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] text-center leading-tight'>
-                        Забронировать отдых
-                    </h1>
+                    <Fade cascade triggerOnce delay={5}>
+                        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] text-center leading-tight'>
+                            Забронировать отдых
+                        </h1>
 
                     <form
                         onSubmit={handleSubmit}
@@ -205,6 +207,7 @@ export default function Booking() {
                             </WhiteButton>
                         </div>
                     </form>
+                    </Fade>
                 </section>
             </BookingWrapper>
         </div>

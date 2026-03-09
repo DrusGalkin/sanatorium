@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Slide} from "react-awesome-reveal";
 
 export default function Question({ title, description }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,12 +56,15 @@ export default function Question({ title, description }) {
 
             {isOpen && (
                 <div className='w-full overflow-hidden transition-all duration-300'>
-                    <div className='w-full p-4 sm:p-5 md:p-6
+                    <Slide direction='down' reverse={!isOpen}>
+                        <div className='w-full p-4 sm:p-5 md:p-6
                                   bg-[#EFE6D7] mt-2 rounded-lg sm:rounded-xl
                                   text-sm sm:text-base md:text-lg
                                   text-[#142C12] leading-relaxed'>
-                        {description}
-                    </div>
+                            {description}
+                        </div>
+                    </Slide>
+
                 </div>
             )}
         </div>
