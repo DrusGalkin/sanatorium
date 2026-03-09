@@ -1,10 +1,24 @@
 import photo from '/middle-photo.jpg'
+import {useEffect, useState} from "react";
 
 export default function MiddleBlockWrapper({ children }){
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 808);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <div className='w-full relative -top-29'>
             <img
-                className='w-full object-cover  h-[1080px]'
+                className={`w-full object-cover ${isMobile ? 'h-[950px]' : 'h-[1080px]'}`}
                 src={photo}
                 alt="Санаторий"
             />

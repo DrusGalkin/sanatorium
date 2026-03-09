@@ -10,7 +10,7 @@ import BookingWrapperRouter from "./shared/tools/booking-wrapper-to-route.jsx";
 function App() {
 
     return (
-        <div className='w-fulltext-[#142C12]  h-full min-h-[100vh] flex flex-col items-center'>
+        <div className='w-full text-[#142C12]  h-full min-h-[100vh] flex flex-col items-center'>
             <Header/>
             <div className='flex flex-col w-full  flex-1'>
                 <Routes>
