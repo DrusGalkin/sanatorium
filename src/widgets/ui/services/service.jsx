@@ -29,7 +29,7 @@ export default function Service() {
     return (
         <div className='flex w-full flex-1 flex-col items-center px-4 md:px-6 lg:px-8'>
             <div className='flex flex-col justify-center items-center w-full max-w-[1600px] mb-8 md:mb-10 lg:mb-12'>
-                <Fade>
+                <Fade triggerOnce>
                     <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
                         Услуги
                     </h1>
@@ -44,7 +44,7 @@ export default function Service() {
             </div>
 
             <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 mb-8 md:mb-10 lg:mb-15 max-w-[1600px]'>
-                <Fade cascade delay={20}  triggerOnce>
+                <Fade cascade delay={20} triggerOnce>
                     {services.map((service, index) => (
                         <ServiceCart
                             key={index}

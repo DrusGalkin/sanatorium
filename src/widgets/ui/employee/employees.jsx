@@ -51,7 +51,7 @@ export default function Employees() {
 
     return (
         <div className='flex w-full flex-1 flex-col items-center'>
-            <Fade >
+            <Fade triggerOnce>
                 <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
                     Медицинский персонал
                 </h1>
@@ -64,7 +64,7 @@ export default function Employees() {
                     <Fade cascade delay={20} triggerOnce>
                         {
                             up.map((item, index) => (
-                                <EmployeeCart url={item.url} role={item.role} name={item.name} key={index}/>
+                                <EmployeeCart id={1} url={item.url} role={item.role} name={item.name} key={index}/>
                             ))
                         }
 

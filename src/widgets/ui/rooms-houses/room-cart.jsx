@@ -79,14 +79,16 @@ export default function RoomCart({revers = false, url, title, price, id, maxPeop
                         {price.toLocaleString()} руб
                     </h2>
 
-                    <WhiteButton
-                        onClick={() => window.location.href = "/rooms/" + id}
-                        className={`
+                    <a href={`/object/${id}`}>
+                        <WhiteButton
+                            className={`
                             ${isMobile ? 'w-full' : 'w-auto'}
                         `}
-                    >
-                        Подробнее
-                    </WhiteButton>
+                        >
+                            Подробнее
+                        </WhiteButton>
+                    </a>
+
                 </div>
             </div>
         </div>

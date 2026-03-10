@@ -25,7 +25,7 @@ export default function About() {
 
     return (
         <div className='flex w-full flex-1 flex-col items-center px-4 sm:px-6 lg:px-8'>
-            <Fade>
+            <Fade triggerOnce>
                 <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] text-center font-light'>
                     О нас
                 </h1>

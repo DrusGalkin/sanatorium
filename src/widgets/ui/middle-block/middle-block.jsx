@@ -20,7 +20,7 @@ export default function MiddleBlock(){
         <div className={ isMobile ? 'w-full z-100' : "w-full"}>
             <MiddleBlockWrapper>
                 <section className='text-[#142C12] text-center px-4'>
-                    <Fade in={isMobile}>
+                    <Fade triggerOnce>
                         <p className="text-xs sm:text-sm uppercase tracking-wider mb-2 opacity-90">
                             Лечебно-курортный санаторий
                         </p>
