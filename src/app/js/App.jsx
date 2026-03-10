@@ -1,11 +1,10 @@
 import {Route, Routes} from "react-router";
-import Home from "./pages/home.jsx";
-import Employee from "./pages/employee.jsx";
-import Object from "./pages/object.jsx";
-import Footer from "./widgets/ui/footer/footer.jsx";
-import Header from "./widgets/ui/header/header.jsx";
-import Booking from "./widgets/ui/booking/booking.jsx";
-import BookingWrapperRouter from "./shared/tools/booking-wrapper-to-route.jsx";
+import Home from "../../pages/home.jsx";
+import Employee from "../../pages/employee.jsx";
+import Object from "../../pages/object.jsx";
+import Footer from "../../widgets/ui/footer/footer.jsx";
+import Header from "../../widgets/ui/header/header.jsx";
+import BookingWrapperRouter from "../../shared/tools/booking-wrapper-to-route.jsx";
 
 function App() {
 

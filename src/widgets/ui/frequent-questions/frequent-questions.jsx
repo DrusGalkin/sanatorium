@@ -1,5 +1,6 @@
 import RoomCart from "../rooms-houses/room-cart.jsx";
 import Question from "./question.jsx";
+import {Element} from "react-scroll";
 
 export default function FrequentQuestions() {
     const questions = [
@@ -27,7 +28,7 @@ export default function FrequentQuestions() {
     ]
 
     return (
-        <div className='flex w-full flex-1 gap-10 flex-col items-center px-4 md:px-6 lg:px-8'>
+        <Element name={'questions'} className='flex w-full flex-1 gap-10 flex-col items-center px-4 md:px-6 lg:px-8'>
             <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] text-center mb-4 md:mb-6'>
                 Часто задаваемые вопросы
             </h1>
@@ -37,6 +38,6 @@ export default function FrequentQuestions() {
                     <Question key={index} title={item.title} description={item.description}/>
                 ))}
             </div>
-        </div>
+        </Element>
     )
 }

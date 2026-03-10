@@ -4,6 +4,7 @@ import photo2 from '/2.jpg'
 import photo3 from '/3.jpg'
 import photo4 from '/4.jpg'
 import photo5 from '/5.jpg'
+import { Link, Element } from 'react-scroll'
 import {Fade, Slide} from "react-awesome-reveal";
 
 export default function About() {
@@ -24,13 +25,12 @@ export default function About() {
     }, []);
 
     return (
-        <div className='flex w-full flex-1 flex-col items-center px-4 sm:px-6 lg:px-8'>
+        <Element name={'about'} className='flex w-full flex-1 flex-col items-center px-4 sm:px-6 lg:px-8'>
             <Fade triggerOnce>
-                <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] text-center font-light'>
+                <h1 className='text-3xl font-tenor sm:text-4xl md:text-5xl lg:text-[4rem] text-center font-light'>
                     О нас
                 </h1>
             </Fade>
-
 
             <div className='w-full mt-8 sm:mt-10 md:mt-14 max-w-[1600px]'>
                 <div className='flex flex-col lg:flex-row w-full gap-8 lg:gap-12 xl:gap-16'>
@@ -101,6 +101,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Element>
     )
 }

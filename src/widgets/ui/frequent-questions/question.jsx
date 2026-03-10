@@ -17,10 +17,10 @@ export default function Question({ title, description }) {
                          cursor-pointer hover:bg-[#142C12]/5 transition-colors
                          min-h-[60px] sm:min-h-[70px] md:min-h-[80px]'
             >
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-[2.115rem]
+                <p className='text-xl sm:text-2xl md:text-3xl lg:text-[2.115rem]
                              font-medium text-[#142C12] leading-tight'>
                     {title}
-                </h1>
+                </p>
 
                 <svg
                     className={`w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-[34px] lg:h-[34px] 

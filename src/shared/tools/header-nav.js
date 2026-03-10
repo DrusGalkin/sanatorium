@@ -1,22 +1,22 @@
 export const HeaderNav = [
     {
         title: "О нас",
-        path: ""
+        path: "about"
     },
     {
         title: "Услуги",
-        path: ""
+        path: "services"
     },
     {
-        title: "Номер",
-        path: ""
+        title: "Номера",
+        path: "rooms"
     },
     {
         title: "Бронь",
-        path: ""
+        path: "booking"
     },
     {
         title: "Вопросы",
-        path: ""
+        path: "questions"
     },
 ]

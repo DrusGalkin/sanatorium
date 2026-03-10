@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+#root {
+    --button-color: #777C5C;
+    --bg-color: #EFE6D7;
+    --text-color: #142C12;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Tenor Sans", sans-serif;
+}
+
+.tenor {
+    font-family: "Tenor Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#root {
+    display: flex;
+    background-color: var(--bg-color);
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}

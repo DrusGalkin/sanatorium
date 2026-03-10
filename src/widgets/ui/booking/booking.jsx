@@ -3,7 +3,8 @@ import { useState } from "react";
 import GreenButton from "../../../shared/ui/green-button.jsx";
 import WhiteButton from "../../../shared/ui/white-button.jsx";
 import DatePicker from "./date-picker.jsx";
-import {Fade} from "react-awesome-reveal"; // Импортируем новый компонент
+import {Fade} from "react-awesome-reveal";
+import {Element} from "react-scroll"; // Импортируем новый компонент
 
 export default function Booking() {
     const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ export default function Booking() {
     }
 
     return (
-        <div className='w-full '>
+        <Element name={'booking'} className='w-full '>
             <BookingWrapper>
                 <section className='text-[#142C12] w-full flex gap-10 flex-1 flex-col items-center justify-center max-w-6xl px-4 sm:px-6 lg:px-8'>
                     <Fade cascade triggerOnce delay={5}>
@@ -210,6 +211,6 @@ export default function Booking() {
                     </Fade>
                 </section>
             </BookingWrapper>
-        </div>
+        </Element>
     );
 }
